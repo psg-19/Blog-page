@@ -19,19 +19,16 @@ function App() {
   
   useEffect(()=>{
    
-
+fetchBlogPosts()
     
   },[])
 
   return (
-   <Routes>
-
-    <Route path='/' element={<Home/>}></Route>
-    <Route path='/blog/:blogId' element={<BlogPage/>}></Route>
-    <Route path='/tag/:tag' element={<TagPage/>}></Route>
-    <Route path='/categories/:category' element={<CategoryPage/>}></Route>
-
-   </Routes>
+   <div>
+    <Header/>
+    <Blogs/>
+    <Pagination/>
+   </div>
   
   );
 }
